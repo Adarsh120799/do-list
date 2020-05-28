@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a8bdba5fcb.js" crossorigin="anonymous"></script>
+    <title>Do list</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1
+        style="color:black;background-color: rgb(240, 157, 171);border-radius:10px;text-align: center;display:inline-block">
+        <i class="far fa-calendar-alt"></i> <%= kindofday %>
+    </h1>
+    <form action="/" method="post">
+        <input type="text" name="newItem" class="newItem" placeholder="Enter Items" autocomplete="off">
+        <button type="submit" name="button" class="btn">+</button>
+        
+    </form>
+    <div class="list">
+        <% for(let i=0; i<newListItems.length; i++) { %>  
+            <input type="checkbox">
+                  <p><%= newListItems[newListItems.length-(i+1)] %></p>
+            <% } %>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
